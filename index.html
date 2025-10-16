@@ -1,178 +1,124 @@
-<!--
-Three ready-to-use single-file HTML landing page templates.
-How to use: copy one of the <body> blocks into your site, replace placeholders (LOGO, IMAGE, GUMROAD_LINK, YOUR_NAME), update colors and fonts.
-Each template includes a CTA button that links to a Gumroad/Payhip checkout URL.
-
-Templates included:
-1) Minimal Conversion Page (fast, Carrd-style)
-2) Content-Led Sales Page (longform, great for storytelling: college journal)
-3) Creator / Newsletter + Product (email capture + product upsell)
-
-You can paste these straight into a hosting provider that supports a single HTML file (Netlify, Vercel static, GitHub Pages) or embed into your CMS.
--->
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Your Product — Simple Landing Templates</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jay Katsuragi — The Living Study</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=EB+Garamond&display=swap" rel="stylesheet">
   <style>
-    /* Minimal reset */
-    html,body{margin:0;padding:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; color:#1f2937}
-    a{color:inherit}
-    .container{max-width:980px;margin:30px auto;padding:20px}
-    .btn{display:inline-block;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:600}
-    .muted{color:#6b7280}
-    .shadow{box-shadow:0 6px 18px rgba(15,23,42,0.08)}
-    img.responsive{max-width:100%;height:auto;border-radius:10px}
-    .badge{display:inline-block;padding:6px 10px;background:#eef2ff;color:#4338ca;border-radius:999px;font-weight:700}
-    @media (max-width:640px){.container{padding:16px;margin:18px auto}}
-    /* Utility grid for templates */
-    .cols{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
-    @media (max-width:760px){.cols{grid-template-columns:1fr}}
-    h1{font-size:28px;margin:0 0 12px}
-    h2{font-size:20px;margin:0 0 10px}
-    p{line-height:1.6;margin:0 0 14px}
-    .small{font-size:13px}
+    body {
+      margin: 0;
+      font-family: 'EB Garamond', serif;
+      background-color: #f5f0dc;
+      color: #3b2f2f;
+      line-height: 1.6;
+      background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+    }
+
+    header {
+      text-align: center;
+      padding: 80px 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    h1, h2 {
+      font-family: 'Cormorant Garamond', serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.1rem;
+    }
+
+    section {
+      text-align: center;
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+      border-top: 1px solid rgba(60, 40, 20, 0.2);
+    }
+
+    .category img {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+
+    .category h2 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+
+    .category p {
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #3b2f2f;
+      color: #f5f0dc;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #6b4b3b;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #6b4b3b;
+      padding: 20px;
+      border-top: 1px solid rgba(60, 40, 20, 0.2);
+    }
   </style>
 </head>
 <body>
 
-<!-- =====================
-1) Minimal Conversion Page
-Best for: Testing with ads, one-off product (fitness guide)
-Structure: Headline -> Subheadline -> Benefits -> Price/CTA -> Social proof
-===================== -->
-<section style="background:#fff;padding:48px 0;border-bottom:1px solid #eef2f6">
-  <div class="container shadow" style="border-radius:14px;padding:28px">
-    <div style="display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap">
-      <div style="display:flex;align-items:center;gap:14px">
-        <div style="width:48px;height:48px;border-radius:10px;background:#111827;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700">YK</div>
-        <div>
-          <div style="font-weight:700">Jay Katsuragi</div>
-          <div class="muted small">Practical guides • Short-form fitness & study</div>
-        </div>
-      </div>
-      <div class="muted small">Domain: yourdomain.com</div>
-    </div>
+<header>
+  <h1>The Living Study</h1>
+  <p><strong>Vision:</strong> To explore, synthesize, and create frameworks of understanding — projects, reflections, and conceptual studies — that turn self-discovery into shared clarity.</p>
+  <p>My meaning lies in the act of discovery itself — in refining ideas, testing them through work, and sharing what is learned.</p>
+</header>
 
-    <div class="cols" style="margin-top:22px">
-      <div>
-        <div class="badge">New — 10 pages</div>
-        <h1>Simple Strength: A 6‑Week Pull-Up Progression</h1>
-        <p class="muted">A concise, no-gym, no-fancy-equipment program to add weight to your pull-ups and build sustainable strength in 6 weeks.</p>
-
-        <ul style="margin:18px 0 22px">
-          <li>Short daily routines you can finish in 15–25 minutes</li>
-          <li>Progression templates & rep targets</li>
-          <li>Coaching notes I used while living out of my car</li>
-        </ul>
-
-        <div style="display:flex;gap:12px;align-items:center">
-          <a class="btn" href="https://gumroad.com/l/YOUR_PRODUCT" style="background:#111827;color:#fff">Get the guide — $9</a>
-          <div class="muted small">Instant PDF • 30-day refund</div>
-        </div>
-
-        <p class="muted small" style="margin-top:14px">Conversion tip: run a short ad set to a specific audience (college males, 18–26, fitness interest). Test 3 headlines.</p>
-      </div>
-
-      <div>
-        <img class="responsive" src="https://images.unsplash.com/photo-1558611848-73f7eb4001d4?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="training" />
-        <div style="margin-top:10px" class="muted small">Example: 100+ readers in first week = strong social proof</div>
-      </div>
-    </div>
-  </div>
+<!-- Category Sections -->
+<section class="category">
+  <img src="your_yggdrasil_image.jpg" alt="Yggdrasil illustration">
+  <h2>Conceptual Study</h2>
+  <p>Explorations into philosophy, systems, and structure — the roots and branches of understanding.</p>
+  <a href="conceptual.html" class="btn">Enter</a>
 </section>
 
-
-<!-- =====================
-2) Content-Led Sales Page (College Journal)
-Best for: Story-driven offers where trust is built through narrative
-Structure: Longform hook -> story -> lessons -> small sell -> testimonials
-===================== -->
-<section style="background:#f9fafb;padding:48px 0">
-  <div class="container" style="background:white;border-radius:12px;padding:32px">
-    <h2 style="margin-top:0">How I Lived Out of My Car, Stayed Sane, and Mastered Practicals</h2>
-    <div class="muted small">An honest journal — essays, daily notes, and the lessons I still use.</div>
-
-    <div style="display:flex;gap:24px;margin-top:18px;align-items:flex-start;flex-wrap:wrap">
-      <div style="flex:1;min-width:260px">
-        <p>Lead paragraph: a small personal anecdote that pulls the reader in. Keep it human and specific — names, times, exact actions. Right away, show the transformation or pain that matters.</p>
-
-        <h3>What’s inside</h3>
-        <ul>
-          <li>15 short essays on habits, boredom, and productivity at college</li>
-          <li>Daily journal snippets you can replicate</li>
-          <li>A short appendix: how I practiced piano while living out of a car</li>
-        </ul>
-
-        <h3>Why this matters</h3>
-        <p class="muted">People buy stories that reflect their current friction. If your journal helps a college student sleep better, plan study blocks, or avoid loneliness — that’s the promise.</p>
-
-        <div style="margin-top:18px">
-          <a class="btn" href="https://gumroad.com/l/YOUR_PRODUCT" style="background:#0f766e;color:#fff">Read the Journal — $7</a>
-          <span class="muted small" style="margin-left:10px">PDF + optional printed zine</span>
-        </div>
-      </div>
-
-      <div style="width:320px;min-width:240px">
-        <div style="background:#111827;color:#fff;padding:18px;border-radius:10px">
-          <div style="font-weight:700">A sample excerpt</div>
-          <p class="small muted" style="color:#d1fae5;opacity:0.95">"On the first night I parked at the college chapel, I decided to practice scales until the sunrise. The neighbor's dog howled, and I learned to accept low-fi background noise as my teacher."</p>
-        </div>
-
-        <div style="margin-top:12px" class="muted small">Social proof: "Helped me through finals" — A. (student)</div>
-      </div>
-    </div>
-
-    <hr style="margin:20px 0;border:none;border-top:1px solid #eef2f6" />
-    <p class="muted small">Marketing tip: turn one essay into a Twitter/X thread or LinkedIn post, then link to this page. Use the thread as the ad creative copy.</p>
-  </div>
+<section class="category">
+  <img src="your_project_image.jpg" alt="Technology and code illustration">
+  <h2>Project Notes</h2>
+  <p>Practical builds and technical notes — testing abstract ideas in reality.</p>
+  <a href="projects.html" class="btn">Enter</a>
 </section>
 
-
-<!-- =====================
-3) Creator / Newsletter + Product
-Best for: Building an audience and monetizing later. Capture email first, then sell.
-Structure: Hook -> Email capture -> Free sample -> Paid upgrade
-===================== -->
-<section style="padding:48px 0">
-  <div class="container" style="background:#fff;border-radius:12px;padding:28px;">
-    <div style="display:flex;gap:20px;align-items:center;justify-content:space-between;flex-wrap:wrap">
-      <div style="flex:1;min-width:280px">
-        <h2>Weekly Notes — Essays on Practice & Productivity</h2>
-        <p class="muted">Sign up for a short weekly email. Each email includes one practical exercise you can try the same day.</p>
-
-        <form action="https://app.convertkit.com/forms/YOUR_FORM/post" method="post" style="display:flex;gap:8px;flex-wrap:wrap">
-          <input name="email" placeholder="Your email" style="padding:10px 12px;border-radius:8px;border:1px solid #e6e7eb;min-width:200px" />
-          <button class="btn" style="background:#111827;color:#fff;border:none;padding:10px 14px;border-radius:8px;">Join free</button>
-        </form>
-
-        <p class="muted small" style="margin-top:10px">Free sample: get a 2-page PDF excerpt sent to your inbox automatically.</p>
-      </div>
-
-      <div style="width:320px;min-width:240px">
-        <div style="padding:14px;border-radius:10px;border:1px dashed #e6e7eb">
-          <strong>Free sample:</strong>
-          <p class="muted small">A practical checklist: "How to schedule three high-leverage study blocks" — PDF excerpt sent after signup.</p>
-          <a class="btn" href="https://gumroad.com/l/YOUR_PRODUCT" style="background:#f97316;color:#fff;margin-top:8px;display:inline-block">Buy full guide — $12</a>
-        </div>
-      </div>
-    </div>
-
-    <div style="margin-top:18px" class="muted small">Pro tip: use the email list to collect testimonials and test pricing. ConvertKit / MailerLite both have free tiers that work fine for starting out.</div>
-  </div>
+<section class="category">
+  <img src="your_reflection_image.jpg" alt="Reflection illustration">
+  <h2>Reflection & Unity</h2>
+  <p>Personal insights, essays, and patterns that tie the conceptual to the lived.</p>
+  <a href="reflection.html" class="btn">Enter</a>
 </section>
 
-
-<!-- Footer -->
-<footer style="padding:22px 0;background:#111827;color:#fff;margin-top:18px">
-  <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap">
-    <div>© <strong>Your Name</strong> — <span class="small">yourdomain.com</span></div>
-    <div class="small muted">Built with a simple HTML template • Replace images & links</div>
-  </div>
+<footer>
+  © 2025 Jay Katsuragi — A Study in Synthesis
 </footer>
 
 </body>
 </html>
+
