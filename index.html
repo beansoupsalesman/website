@@ -51,7 +51,32 @@
       box-shadow: 0 4px 14px rgba(0,0,0,0.1);
       margin-bottom: 20px;
     }
+/* Conceptual Study Background */
+    .category.conceptual {
+      position: relative;
+      background-image: url('yggdrasil.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: #2e1d1d;
+      overflow: hidden;
+    }
 
+    .category.conceptual::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(245, 240, 220, 0.7); /* parchment-like overlay */
+      backdrop-filter: blur(2px);
+    }
+  
+    .category.conceptual h2,
+    .category.conceptual p,
+    .category.conceptual a {
+    position: relative;
+    z-index: 1;
+    }
+    
     .category h2 {
       font-size: 1.8rem;
       margin-bottom: 10px;
@@ -95,7 +120,6 @@
 
 <!-- Category Sections -->
 <section class="category">
-  <img src="GPT_Image_1_A_Renaissancestyle_sketch_of_yggdrasilworld_tree_w_0(1).png" alt="Yggdrasil illustration">
   <h2>Conceptual Study</h2>
   <p>Explorations into philosophy, systems, and structure — the roots and branches of understanding.</p>
   <a href="conceptual.html" class="btn">Enter</a>
